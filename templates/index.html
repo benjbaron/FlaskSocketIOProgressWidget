@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Heroku SocketIO</title>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="//d3js.org/d3.v3.min.js"></script>
+        <style>
+            .container {
+              height: 100%;
+              display: grid;
+            }
+
+            #loader {
+                margin: auto;
+            }
+
+            .progress-meter .background {
+              fill: #ccc;
+            }
+
+            .progress-meter .foreground {
+              fill: #000;
+            }
+
+            .progress-meter text {
+              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              font-size: 24px;
+              font-weight: bold;
+            }
+
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: auto;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <button id="start" class="button" onclick="send()">Start</button>
+            <div id="loader"></div>
+        </div>
+        <script src="static/script.js"></script>
+    </body>
+</html>
